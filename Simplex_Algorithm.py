@@ -368,7 +368,7 @@ def test1():
 
     
 def test2():
-
+    '''(3.5,0,1.5,7.5,0)^T'''
     c = np.array([2, 1])
     A = np.array([[0,5], [6, 2],[1,1]])
     b = np.array([15,24,5])
@@ -380,12 +380,10 @@ def test2():
  
     solver = Simplex_Algorithm(c, A, b,Agq,bgq, Aeq, beq, bounds)
     solver.solve()
- 
-    #print("Test 1's result:", solver.opt, solver.best_x)
-    #print("Test 1's true optimal x: [4, 2]\n")     
+   
 
 def test3():
-    
+    '''(0,2.5,1.5,0,0)^T'''
     c = np.array([-3,0, 1])
     A = np.array([[1,1,1]])
     b = np.array([4])
@@ -399,7 +397,7 @@ def test3():
     solver.solve()
 
 def test4():
-    
+    '''无解'''
     c = np.array([2,1])
     A = np.array([[1,1]])
     b = np.array([2])
@@ -445,8 +443,8 @@ def test6():
 
 if __name__ == '__main__':
     #test1() 
-    test2()   
-    #test3()
+    #test2()   
+    test3()
     #test4()
     #test5()
     #test6()
